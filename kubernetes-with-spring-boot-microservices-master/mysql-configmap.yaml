@@ -4,4 +4,4 @@ metadata:
   name: db-conf
 data:
  host: rent-car-database
- name: rent-car-database  
+ name: rentcardb  
