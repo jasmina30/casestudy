@@ -57,7 +57,6 @@ spec:
           - "--ignore-db-dir=lost+found" # Workaround for https://github.com/docker-library/mysql/issues/186
         name: rent-car-database 
         env:
-        
         - name: MYSQL_USER # Setting USER username on mysql From a 'Secret'
           valueFrom:
             secretKeyRef:
@@ -73,9 +72,9 @@ spec:
             configMapKeyRef:
               name: db-conf
               key: name
-         - name: MYSQL_HOST # Setting Database Name from a 'ConfigMap'
-           valueFrom:
-             secretKeyRef:
+        - name: MYSQL_HOST # Setting Database Name from a 'ConfigMap'
+          valueFrom:
+            secretKeyRef:
                name: db-credentials
                key: port
         ports:
