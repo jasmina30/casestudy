@@ -79,7 +79,7 @@ spec:
          - name: MYSQL_DB_PORT
               valueFrom:
                 secretKeyRef:
-                  name: rent-car-credentials
+                  name: db-credentials
                   key: port
           #volumeMounts: # Mounting the volume
         volumeMounts:
