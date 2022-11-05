@@ -76,11 +76,11 @@ spec:
             secretKeyRef:
               name: db-credentials
               key: password  
-         - name: MYSQL_DB_PORT
-              valueFrom:
-                secretKeyRef:
-                  name: db-credentials
-                  key: port
+        - name: MYSQL_DB_PORT
+          valueFrom:
+            secretKeyRef:
+               name: db-credentials
+               key: port
           #volumeMounts: # Mounting the volume
         volumeMounts:
           - name: myacnt-pv-claim # name of the PVC
@@ -102,4 +102,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/mnt/data"            
+    path: "/mnt/data" 
