@@ -85,3 +85,16 @@ spec:
         - name: mycust-pv-claim # name of the PVC
           persistentVolumeClaim:
             claimName: mycust-pv-claim # name of the PVC
+            
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mycust-pv-claim
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data"
